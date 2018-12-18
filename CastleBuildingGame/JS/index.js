@@ -3,15 +3,21 @@ var woodenwalls = false;
 var squaretowers = false;
 var circulartowers = false;
 
+var balanceheading = document.getElementById("balance")
+var balance = "1000"
+setBalance()
 
-function woodenwalls {
+
+function woodenwalls() {
 
     if (woodenwalls = true) {
         alert("You can only buy one set of walls!")
     }
     else {
-        if (stonewalls = true) {
+        if (stonewalls == true) {
             removeStoneWalls()
+            //WOODEN WALLS APPEAR
+            balance=balance-100
         }
         else {
             //WOODEN WALLS APPEAR
@@ -20,13 +26,13 @@ function woodenwalls {
 
 }
 
-function stonewalls {
+function stonewalls() {
 
-    if (stonewalls = true) {
+    if (stonewalls == true) {
         alert("You can only buy one set of walls!")
     }
     else {
-        if (woodenwalls = true) {
+        if (woodenwalls == true) {
             removeWoodenWalls()
         }
         else {
@@ -34,4 +40,8 @@ function stonewalls {
         }
     }
 
+}
+
+function setBalance() {
+    balanceheading.innerHTML = "Balance: "+balance
 }
